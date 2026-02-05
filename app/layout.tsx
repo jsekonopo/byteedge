@@ -17,9 +17,73 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ByteEdge Consulting | AI & Technology For Business Impact",
+  metadataBase: new URL('https://byteedge.ca'),
+  title: {
+    default: "ByteEdge Consulting | AI & Technology For Business Impact",
+    template: "%s | ByteEdge Consulting"
+  },
   description: "Strategy, Execution, Scale. We help companies design, build, and integrate AI systems that create real competitive edges.",
+  keywords: ["AI Consulting", "Software Engineering", "Tech Strategy", "Next.js", "Cloud Architecture", "Digital Transformation"],
+  authors: [{ name: "ByteEdge Consulting" }],
+  creator: "ByteEdge Consulting",
+  publisher: "ByteEdge Consulting",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "ByteEdge Consulting | AI & Tech Strategy",
+    description: "We help companies design, build, and integrate AI systems that create real competitive edges.",
+    url: 'https://byteedge.ca',
+    siteName: 'ByteEdge Consulting',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg', // Placeholder, user can add specific OG image later
+        width: 1200,
+        height: 630,
+        alt: 'ByteEdge Consulting - AI & Technology',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ByteEdge Consulting',
+    description: 'We help companies design, build, and integrate AI systems that create real competitive edges.',
+    creator: '@byteedge',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ByteEdge Consulting",
+  "url": "https://byteedge.ca",
+  "logo": "https://byteedge.ca/logo.png",
+  "sameAs": [
+    "https://linkedin.com/company/byteedge-consulting",
+    "https://twitter.com/byteedge"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0123",
+    "contactType": "customer service"
+  }
+}
 
 export default function RootLayout({
   children,
@@ -31,6 +95,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <CustomCursor />
 
         {/* Global Noise Texture */}
