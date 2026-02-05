@@ -1,26 +1,172 @@
 @import "tailwindcss";
 
 :root {
+  /* Premium Light Theme - Clean, professional, airy */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  /* Slate 900 */
+  --primary: #2563eb;
+  /* Blue 600 */
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  /* Slate 100 */
+  --secondary-foreground: #0f172a;
+  --accent: #f8fafc;
+  /* Slate 50 */
+  --accent-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  /* Slate 500 */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  /* Slate 200 */
+
+  --radius: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-grid: grid-movement 20s linear infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes grid-movement {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(40px);
+    }
+
+    /* Matches grid size */
+  }
+
+  --animate-gradient-x: gradient-x 15s ease infinite;
+
+  @keyframes gradient-x {
+
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
 }
+
+/* Custom Scrollbar - for that tech feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Colored Glow Shadows */
+.shadow-glow-blue {
+  box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.3),
+    0 0 20px -5px rgba(59, 130, 246, 0.2);
+}
+
+.shadow-glow-purple {
+  box-shadow: 0 0 40px -10px rgba(168, 85, 247, 0.3),
+    0 0 20px -5px rgba(168, 85, 247, 0.2);
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Premium Tech Dark Theme - Deep, starry, 'dev' feel */
+    --background: #030712;
+    /* Gray 950 - slightly cooler/deeper than slate */
+    --foreground: #f8fafc;
+    /* Slate 50 */
+    --primary: #3b82f6;
+    /* Blue 500 - Electric */
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    /* Slate 800 */
+    --secondary-foreground: #f8fafc;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --muted: #0f172a;
+    --muted-foreground: #94a3b8;
+    /* Slate 400 */
+    --card: #0b1120;
+    /* Slightly lighter than bg */
+    --card-foreground: #f8fafc;
+    --border: #1e293b;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
