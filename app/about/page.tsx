@@ -59,7 +59,7 @@ export default function AboutPage() {
                                 name: "Leano Sekonopo",
                                 role: "Chief Product Officer",
                                 bio: "Leads product strategy and technical delivery, ensuring solutions are built right and deliver measurable impact.",
-                                image: null
+                                image: "/leano.jpg"
                             },
                             {
                                 name: "Daniela Madubuike",
