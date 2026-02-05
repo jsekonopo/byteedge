@@ -58,22 +58,33 @@ export default function AboutPage() {
                             {
                                 name: "Leano Sekonopo",
                                 role: "Chief Product Officer",
-                                bio: "Leads product strategy and technical delivery, ensuring solutions are built right and deliver measurable impact."
+                                bio: "Leads product strategy and technical delivery, ensuring solutions are built right and deliver measurable impact.",
+                                image: null
                             },
                             {
                                 name: "Daniela Madubuike",
                                 role: "Chief Growth Officer",
-                                bio: "Drives client acquisition and relationship management, connecting businesses with the right technology solutions."
+                                bio: "Drives client acquisition and relationship management, connecting businesses with the right technology solutions.",
+                                image: "/daniela.jpeg"
                             },
                             {
                                 name: "Victoria Zikiye",
                                 role: "Chief Operations Officer",
-                                bio: "Oversees operations and process optimization, ensuring seamless execution and organizational excellence."
+                                bio: "Oversees operations and process optimization, ensuring seamless execution and organizational excellence.",
+                                image: "/victoria.jpeg"
                             }
                         ].map((founder) => (
                             <Card key={founder.name} className="text-center overflow-hidden group">
-                                <div className="bg-slate-100 dark:bg-slate-800 h-64 flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors">
-                                    <User className="h-24 w-24 text-slate-300 dark:text-slate-600 group-hover:text-blue-300 transition-colors" />
+                                <div className="bg-slate-100 dark:bg-slate-800 h-64 flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors overflow-hidden relative">
+                                    {founder.image ? (
+                                        <img
+                                            src={founder.image}
+                                            alt={founder.name}
+                                            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                    ) : (
+                                        <User className="h-24 w-24 text-slate-300 dark:text-slate-600 group-hover:text-blue-300 transition-colors" />
+                                    )}
                                 </div>
                                 <CardContent className="pt-6">
                                     <h3 className="text-xl font-bold text-slate-900 dark:text-white">{founder.name}</h3>
