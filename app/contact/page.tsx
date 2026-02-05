@@ -8,15 +8,36 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function ContactPage() {
-    const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+    const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormStatus('submitting');
-        // Simulate submission
-        setTimeout(() => {
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            firstName: formData.get('first-name'),
+            lastName: formData.get('last-name'),
+            email: formData.get('email'),
+            company: formData.get('company'),
+            message: formData.get('message'),
+        };
+
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) throw new Error('Failed to send message');
+
             setFormStatus('success');
-        }, 1500);
+            (e.target as HTMLFormElement).reset();
+        } catch (error) {
+            console.error(error);
+            setFormStatus('error');
+        }
     };
 
     return (
@@ -109,9 +130,11 @@ export default function ContactPage() {
                                             </label>
                                             <input
                                                 type="text"
+                                                name="first-name"
                                                 id="first-name"
                                                 required
-                                                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                                                disabled={formStatus === 'submitting'}
+                                                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white disabled:opacity-50"
                                             />
                                         </div>
                                         <div className="space-y-2">
@@ -120,9 +143,11 @@ export default function ContactPage() {
                                             </label>
                                             <input
                                                 type="text"
+                                                name="last-name"
                                                 id="last-name"
                                                 required
-                                                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                                                disabled={formStatus === 'submitting'}
+                                                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white disabled:opacity-50"
                                             />
                                         </div>
                                     </div>
@@ -133,9 +158,11 @@ export default function ContactPage() {
                                         </label>
                                         <input
                                             type="email"
+                                            name="email"
                                             id="email"
                                             required
-                                            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                                            disabled={formStatus === 'submitting'}
+                                            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white disabled:opacity-50"
                                         />
                                     </div>
 
@@ -145,8 +172,10 @@ export default function ContactPage() {
                                         </label>
                                         <input
                                             type="text"
+                                            name="company"
                                             id="company"
-                                            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                                            disabled={formStatus === 'submitting'}
+                                            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white disabled:opacity-50"
                                         />
                                     </div>
 
@@ -156,11 +185,19 @@ export default function ContactPage() {
                                         </label>
                                         <textarea
                                             id="message"
+                                            name="message"
                                             required
                                             rows={4}
-                                            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                                            disabled={formStatus === 'submitting'}
+                                            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-slate-700 dark:bg-slate-950 dark:text-white disabled:opacity-50"
                                         />
                                     </div>
+
+                                    {formStatus === 'error' && (
+                                        <div className="text-red-500 text-sm text-center">
+                                            Something went wrong. Please try again.
+                                        </div>
+                                    )}
 
                                     <Button type="submit" className="w-full" disabled={formStatus === 'submitting'}>
                                         {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
