@@ -57,7 +57,7 @@ export default function AboutPage() {
                         {[
                             {
                                 name: "Leano Sekonopo",
-                                role: "Chief Product Officer",
+                                role: "Chief Technology Officer",
                                 bio: "Leads product strategy and technical delivery, ensuring solutions are built right and deliver measurable impact.",
                                 image: "/leano.jpg"
                             },
