@@ -9,48 +9,48 @@ export function HeroDashboard() {
                 initial={{ opacity: 0, rotateX: 20, y: 100 }}
                 animate={{ opacity: 1, rotateX: 20, y: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                className="relative rounded-xl border border-slate-200 bg-white/40 backdrop-blur-xl shadow-2xl dark:border-slate-800 dark:bg-slate-900/40 transform-style-3d rotate-x-12"
+                className="relative rounded-xl border border-border bg-card/40 backdrop-blur-xl shadow-2xl transform-style-3d rotate-x-12"
             >
                 {/* Browser Header */}
-                <div className="flex items-center gap-2 border-b border-slate-200/50 bg-white/50 px-4 py-3 dark:border-slate-800/50 dark:bg-slate-950/50">
+                <div className="flex items-center gap-2 border-b border-border/50 bg-muted/50 px-4 py-3">
                     <div className="flex gap-1.5">
                         <div className="h-3 w-3 rounded-full bg-red-400/80" />
                         <div className="h-3 w-3 rounded-full bg-amber-400/80" />
                         <div className="h-3 w-3 rounded-full bg-green-400/80" />
                     </div>
-                    <div className="mx-auto h-5 w-1/3 rounded-full bg-slate-200/50 dark:bg-slate-800/50" />
+                    <div className="mx-auto h-5 w-1/3 rounded-full bg-muted" />
                 </div>
 
                 {/* Dashboard Content */}
                 <div className="grid grid-cols-4 gap-4 p-4 md:grid-cols-5 md:gap-6 md:p-6 lg:p-8">
                     {/* Sidebar Mockup */}
                     <div className="hidden md:block md:col-span-1 space-y-3">
-                        <div className="h-8 w-full rounded-lg bg-blue-100/50 dark:bg-blue-900/20" />
-                        <div className="h-4 w-3/4 rounded bg-slate-200/50 dark:bg-slate-800/50" />
-                        <div className="h-4 w-2/3 rounded bg-slate-200/50 dark:bg-slate-800/50" />
-                        <div className="h-4 w-4/5 rounded bg-slate-200/50 dark:bg-slate-800/50" />
+                        <div className="h-8 w-full rounded-lg bg-primary/20" />
+                        <div className="h-4 w-3/4 rounded bg-muted" />
+                        <div className="h-4 w-2/3 rounded bg-muted" />
+                        <div className="h-4 w-4/5 rounded bg-muted" />
                     </div>
 
                     {/* Main Content */}
                     <div className="col-span-4 space-y-4 md:col-span-4">
                         {/* Stats Row */}
                         <div className="grid grid-cols-3 gap-4">
-                            <div className="rounded-lg bg-white/60 p-4 shadow-sm dark:bg-slate-800/60">
-                                <div className="mb-2 h-2 w-1/2 rounded bg-slate-200 dark:bg-slate-700" />
-                                <div className="h-6 w-16 rounded bg-blue-100 dark:bg-blue-900/30" />
+                            <div className="rounded-lg bg-card/60 p-4 shadow-sm">
+                                <div className="mb-2 h-2 w-1/2 rounded bg-muted" />
+                                <div className="h-6 w-16 rounded bg-blue-500/20" />
                             </div>
-                            <div className="rounded-lg bg-white/60 p-4 shadow-sm dark:bg-slate-800/60">
-                                <div className="mb-2 h-2 w-1/2 rounded bg-slate-200 dark:bg-slate-700" />
-                                <div className="h-6 w-16 rounded bg-purple-100 dark:bg-purple-900/30" />
+                            <div className="rounded-lg bg-card/60 p-4 shadow-sm">
+                                <div className="mb-2 h-2 w-1/2 rounded bg-muted" />
+                                <div className="h-6 w-16 rounded bg-purple-500/20" />
                             </div>
-                            <div className="rounded-lg bg-white/60 p-4 shadow-sm dark:bg-slate-800/60">
-                                <div className="mb-2 h-2 w-1/2 rounded bg-slate-200 dark:bg-slate-700" />
-                                <div className="h-6 w-16 rounded bg-emerald-100 dark:bg-emerald-900/30" />
+                            <div className="rounded-lg bg-card/60 p-4 shadow-sm">
+                                <div className="mb-2 h-2 w-1/2 rounded bg-muted" />
+                                <div className="h-6 w-16 rounded bg-emerald-500/20" />
                             </div>
                         </div>
 
                         {/* Chart Area */}
-                        <div className="flex h-40 items-end justify-between gap-2 rounded-lg bg-white/30 p-4 dark:bg-slate-800/30">
+                        <div className="flex h-40 items-end justify-between gap-2 rounded-lg bg-card/30 p-4">
                             {[40, 70, 45, 90, 65, 80, 50, 95].map((h, i) => (
                                 <motion.div
                                     key={i}

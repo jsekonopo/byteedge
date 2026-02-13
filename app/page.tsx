@@ -39,14 +39,14 @@ export default function Home() {
               ByteEdge Consulting
             </motion.div>
 
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-slate-900 dark:text-white leading-[1.05]">
+            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground leading-[1.05]">
               AI That Actually <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 animate-gradient-x pb-2">
                 Computes ROI.
               </span>
             </motion.h1>
 
-            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">
+            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
               We don't just "do AI". We engineer intelligent systems that automate operations, slash costs, and give you an unfair advantage.
             </motion.p>
 
@@ -58,7 +58,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="#services">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 h-14 text-lg bg-white/50 backdrop-blur-sm border-slate-200 dark:border-slate-800 hover:bg-white/80 dark:hover:bg-slate-900/80">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 h-14 text-lg bg-background/50 backdrop-blur-sm border-border hover:bg-accent hover:text-accent-foreground">
                   Explore Services
                 </Button>
               </Link>
@@ -70,9 +70,9 @@ export default function Home() {
       </section>
 
       {/* Trust Ticker / Stats */}
-      <div className="border-y border-slate-200/50 dark:border-slate-800/50 bg-white/5 dark:bg-slate-950/20 backdrop-blur-sm overflow-hidden">
+      <div className="border-y border-border/50 bg-muted/20 backdrop-blur-sm overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 divide-x divide-slate-200/10 dark:divide-slate-800/50">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 divide-x divide-border/20">
             {[
               { label: "Efficiency Gain", value: "40%+" },
               { label: "Deployment Time", value: "<4 Wks" },
@@ -80,8 +80,8 @@ export default function Home() {
               { label: "ROI Focused", value: "Always" }
             ].map((stat, i) => (
               <div key={i} className="text-center px-4">
-                <div className="text-3xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white mb-2">{stat.value}</div>
-                <div className="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">{stat.label}</div>
+                <div className="text-3xl md:text-5xl font-bold tracking-tighter text-foreground mb-2">{stat.value}</div>
+                <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>

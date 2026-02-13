@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Premium Light Theme - Clean, professional, airy */
   --background: #ffffff;

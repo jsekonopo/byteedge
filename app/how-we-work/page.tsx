@@ -12,7 +12,7 @@ export default function HowWeWorkPage() {
             {/* Hero */}
             <Section className="relative pt-40 pb-20 md:pt-48 md:pb-32 overflow-hidden">
                 {/* Blueprint Pattern */}
-                <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950">
+                <div className="absolute inset-0 bg-background">
                     <div className="absolute inset-0 bg-[linear-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:bg-[linear-gradient(#1f2937_1px,transparent_1px)] opacity-50"></div>
                 </div>
 
@@ -21,7 +21,7 @@ export default function HowWeWorkPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+                        className="text-4xl md:text-5xl font-bold text-foreground"
                     >
                         Precision Engineering
                     </motion.h1>
@@ -30,7 +30,7 @@ export default function HowWeWorkPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-xl text-slate-600 dark:text-slate-300"
+                        className="text-xl text-muted-foreground"
                     >
                         We don't guess. We audit, architect, and execute with military precision.
                     </motion.p>
@@ -41,8 +41,8 @@ export default function HowWeWorkPage() {
             <Section>
                 <div className="space-y-16">
                     <div className="text-center max-w-2xl mx-auto">
-                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">The ByteEdge Method</h2>
-                        <p className="text-slate-600 dark:text-slate-400">
+                        <h2 className="text-3xl font-bold text-foreground mb-4">The ByteEdge Method</h2>
+                        <p className="text-muted-foreground">
                             Our standard operating procedure for delivering high-impact software and AI solutions.
                         </p>
                     </div>
@@ -61,12 +61,12 @@ export default function HowWeWorkPage() {
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs ring-4 ring-white dark:ring-slate-950 z-10">
                                     {item.step}
                                 </div>
-                                <div className="h-full p-8 rounded-3xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all text-center group">
-                                    <div className="mx-auto h-12 w-12 rounded-2xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-900 dark:text-white mb-6 group-hover:scale-110 transition-transform">
+                                <div className="h-full p-8 rounded-3xl bg-card border border-border shadow-sm hover:shadow-xl transition-all text-center group">
+                                    <div className="mx-auto h-12 w-12 rounded-2xl bg-muted flex items-center justify-center text-foreground mb-6 group-hover:scale-110 transition-transform">
                                         <item.icon className="h-6 w-6" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">{item.desc}</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
+                                    <p className="text-sm text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -75,30 +75,30 @@ export default function HowWeWorkPage() {
             </Section>
 
             {/* Engagement Models */}
-            <Section className="py-24 bg-slate-50 dark:bg-slate-900/20">
+            <Section className="py-24 bg-muted/20">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">How to Engage Us</h2>
-                        <p className="text-slate-600 dark:text-slate-400">
+                        <h2 className="text-3xl font-bold text-foreground mb-4">How to Engage Us</h2>
+                        <p className="text-muted-foreground">
                             Flexible models designed to fit your stage and needs.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="p-8 rounded-3xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+                        <div className="p-8 rounded-3xl bg-card border border-border shadow-sm relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-5">
                                 <Clock className="h-32 w-32" />
                             </div>
-                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Project Based</h3>
-                            <p className="text-slate-500 dark:text-slate-400 mb-6">Best for defined scopes and clear deliverables.</p>
+                            <h3 className="text-2xl font-bold text-foreground mb-2">Project Based</h3>
+                            <p className="text-muted-foreground mb-6">Best for defined scopes and clear deliverables.</p>
                             <ul className="space-y-3 mb-8">
-                                <li className="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
+                                <li className="flex gap-3 text-sm text-card-foreground">
                                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" /> Fixed timeline & budget
                                 </li>
-                                <li className="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
+                                <li className="flex gap-3 text-sm text-card-foreground">
                                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" /> Specific deliverables (e.g. MVP, App)
                                 </li>
-                                <li className="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
+                                <li className="flex gap-3 text-sm text-card-foreground">
                                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" /> Minimal management required
                                 </li>
                             </ul>
@@ -107,7 +107,7 @@ export default function HowWeWorkPage() {
                             </Link>
                         </div>
 
-                        <div className="p-8 rounded-3xl bg-slate-900 dark:bg-slate-800 border border-slate-700 shadow-xl relative overflow-hidden text-white">
+                        <div className="p-8 rounded-3xl bg-slate-900 text-white border border-slate-700 shadow-xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-5">
                                 <Zap className="h-32 w-32 text-white" />
                             </div>

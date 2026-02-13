@@ -44,7 +44,7 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-slate-900 dark:text-white"
+                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-foreground"
                     >
                         Our Work <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
@@ -55,7 +55,7 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
+                        className="text-xl text-muted-foreground max-w-2xl mx-auto"
                     >
                         We don't just advise—we architect and build mission-critical systems. Here are a few ways we've created unfair advantages for our clients.
                     </motion.p>
@@ -72,8 +72,8 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
                             className={cn(
                                 "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
                                 activeFilter === tab
-                                    ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-lg shadow-blue-500/20 scale-105"
-                                    : "bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700"
+                                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20 scale-105"
+                                    : "bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                             )}
                         >
                             {tab}
@@ -108,7 +108,7 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
                                         }
                                     >
                                         {/* Project Image (or Default) */}
-                                        <div className="mb-6 -mx-8 -mt-8 overflow-hidden rounded-t-2xl border-b border-slate-200 dark:border-slate-800">
+                                        <div className="mb-6 -mx-8 -mt-8 overflow-hidden rounded-t-2xl border-b border-border">
                                             <img
                                                 src={project.image || "/default-project.png"}
                                                 alt={project.title}
@@ -127,24 +127,24 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
                                             )}>
                                                 <IconComponent className="w-6 h-6" />
                                             </div>
-                                            <div className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                            <div className="px-3 py-1 rounded-full text-xs font-semibold bg-muted text-muted-foreground uppercase tracking-wider">
                                                 {project.category}
                                             </div>
                                         </div>
 
                                         {/* Content */}
                                         <div className="flex-1 space-y-4">
-                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-500 transition-colors">
+                                            <h3 className="text-2xl font-bold text-foreground group-hover:text-blue-500 transition-colors">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            <p className="text-muted-foreground leading-relaxed">
                                                 {project.description}
                                             </p>
 
                                             {/* Metrics Highlight */}
-                                            <div className="py-4 border-y border-slate-100 dark:border-slate-800 space-y-2">
+                                            <div className="py-4 border-y border-border space-y-2">
                                                 {project.metrics.map((metric, idx) => (
-                                                    <div key={idx} className="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                                                    <div key={idx} className="flex items-center gap-2 text-sm font-medium text-card-foreground">
                                                         <BarChart3 className={cn(
                                                             "w-4 h-4",
                                                             project.color === "blue" ? "text-blue-500" :
@@ -161,7 +161,7 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
                                         {/* Footer / Tags */}
                                         <div className="mt-6 pt-4 flex flex-wrap gap-2">
                                             {project.tags.map(tag => (
-                                                <span key={tag} className="px-2 py-1 text-[10px] font-mono text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800 rounded">
+                                                <span key={tag} className="px-2 py-1 text-[10px] font-mono text-muted-foreground border border-border rounded">
                                                     {tag}
                                                 </span>
                                             ))}
@@ -177,8 +177,8 @@ export default function PortfolioClient({ initialProjects }: PortfolioClientProp
             {/* Bottom CTA */}
             <Section className="py-20 text-center">
                 <div className="max-w-3xl mx-auto space-y-6">
-                    <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Have a similar challenge?</h2>
-                    <p className="text-slate-600 dark:text-slate-400">
+                    <h2 className="text-3xl font-bold text-foreground">Have a similar challenge?</h2>
+                    <p className="text-muted-foreground">
                         Our engineering team is ready to deploy. Let's discuss your architecture.
                     </p>
                     <Link href="https://cal.com/byteedge/30min" target="_blank" rel="noopener noreferrer">
