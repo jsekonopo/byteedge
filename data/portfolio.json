@@ -1,0 +1,177 @@
+[
+  {
+    "id": "viavi-map-300",
+    "title": "VIAVI Map 300",
+    "category": "Telecom / Hardware",
+    "filterCategory": "VR & Deep Tech",
+    "description": "Led the development of the web recorder component for diagnostics and the file manager for the MAP-300 photonic test platform. Enabled remote management and detailed signal analysis for optical manufacturing.",
+    "metrics": [
+      "Real-time Diagnostics",
+      "Remote File Management"
+    ],
+    "tags": [
+      "React",
+      "Node.js",
+      "Embedded Systems",
+      "WebSockets"
+    ],
+    "icon": "Monitor",
+    "color": "blue",
+    "image": ""
+  },
+  {
+    "id": "loan-origination-tanzania",
+    "title": "SME Loan Origination System",
+    "category": "FinTech",
+    "filterCategory": "Web & SaaS",
+    "description": "Developed a loan origination application tailored for the Tanzanian market. Supports flexible repayment schedules (monthly, weekly) and automated interest calculations for small business owners.",
+    "metrics": [
+      "Flexible Repayments",
+      "Automated Calculations"
+    ],
+    "tags": [
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "Finance"
+    ],
+    "icon": "BarChart3",
+    "color": "emerald",
+    "image": ""
+  },
+  {
+    "id": "airbnb-market-analysis",
+    "title": "AirBNB Market Analysis",
+    "category": "Real Estate / Data Science",
+    "filterCategory": "AI & Data",
+    "description": "Built an analytical tool using AirDNA data to identify profitable AirBNB arbitrage opportunities. Analyzes occupancy rates, seasonality, and revenue potential to guide property investment decisions.",
+    "metrics": [
+      "ROI Prediction",
+      "Market Trend Analysis"
+    ],
+    "tags": [
+      "Python",
+      "Pandas",
+      "Data Visualization",
+      "AirDNA API"
+    ],
+    "icon": "Database",
+    "color": "purple",
+    "image": ""
+  },
+  {
+    "id": "precision-os-dashboard",
+    "title": "PrecisionOS VR Training",
+    "category": "VR / Medical Tech",
+    "filterCategory": "VR & Deep Tech",
+    "description": "A comprehensive analytics dashboard for VR surgical training. Tracks user performance across procedures with immersive data visualization and administrative controls.",
+    "metrics": [
+      "Used by 50+ Hospitals",
+      "Real-time VR Sync"
+    ],
+    "tags": [
+      "React",
+      "Three.js",
+      "WebGL",
+      "AWS"
+    ],
+    "icon": "Database",
+    "color": "blue",
+    "image": "/precisionos-dashboard.png"
+  },
+  {
+    "id": "agri-assist",
+    "title": "AgriAssist",
+    "category": "AgTech AI",
+    "filterCategory": "AI & Data",
+    "description": "AI-powered agriculture management app that helps farmers optimize crop yields and livestock health. Automated analysis providing actionable insights from field data.",
+    "metrics": [
+      "20% Yield Increase",
+      "Real-time Alerts"
+    ],
+    "tags": [
+      "Python",
+      "TensorFlow",
+      "IoT",
+      "Mobile"
+    ],
+    "icon": "Zap",
+    "color": "emerald"
+  },
+  {
+    "id": "churchify",
+    "title": "Churchify",
+    "category": "SaaS Platform",
+    "filterCategory": "Web & SaaS",
+    "description": "Modern church management application with built-in AI assistance for member engagement, event planning, and resource allocation.",
+    "metrics": [
+      "Automation Suite",
+      "Smart Scheduling"
+    ],
+    "tags": [
+      "Next.js",
+      "AI Integration",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "icon": "Layout",
+    "color": "purple"
+  },
+  {
+    "id": "autonomous-supply-chain",
+    "title": "Autonomous Supply Chain Agent",
+    "category": "AI Automation",
+    "filterCategory": "AI & Data",
+    "description": "A multi-agent system that monitors inventory levels, predicts shortages using LSTM models, and autonomously negotiates reorders with suppliers via email.",
+    "metrics": [
+      "Reduced stockouts by 85%",
+      "Saved 20h/week manual labor"
+    ],
+    "tags": [
+      "Python",
+      "LangChain",
+      "OpenAI",
+      "PostgreSQL"
+    ],
+    "icon": "Bot",
+    "color": "blue"
+  },
+  {
+    "id": "fintech-fraud-guard",
+    "title": "FinTech Fraud Guard",
+    "category": "Security & Big Data",
+    "filterCategory": "VR & Deep Tech",
+    "description": "Real-time transaction monitoring engine processing 50k+ events per second. Uses anomaly detection to flag suspicious patterns with <50ms latency.",
+    "metrics": [
+      "$2.4M fraud prevented/yr",
+      "99.99% uptime"
+    ],
+    "tags": [
+      "Go",
+      "Kafka",
+      "ClickHouse",
+      "eBPF"
+    ],
+    "icon": "ShieldCheck",
+    "color": "purple"
+  },
+  {
+    "id": "telehealth-platform-remodel",
+    "title": "Telehealth Core Platform",
+    "category": "Web Platform",
+    "filterCategory": "Web & SaaS",
+    "description": "Complete re-architecture of a legacy monolith into modular micro-frontends. Improved patient load times and enabled fully compliant video consultations.",
+    "metrics": [
+      "3x faster page loads",
+      "HIPAA Compliant"
+    ],
+    "tags": [
+      "Next.js",
+      "WebRTC",
+      "Redis",
+      "K8s"
+    ],
+    "icon": "Globe",
+    "color": "emerald"
+  }
+]

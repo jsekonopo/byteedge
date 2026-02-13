@@ -84,8 +84,8 @@ export default function ContactPage() {
                                 <div className="ml-4">
                                     <h3 className="text-lg font-medium text-slate-900 dark:text-white">Book a Call</h3>
                                     <p className="mt-1 text-slate-600 dark:text-slate-400 mb-2">Schedule a free strategy session directly.</p>
-                                    <Link href="https://calendly.com/pandahubottawa/byteedge-strategy-call" target="_blank" rel="noopener noreferrer">
-                                        <Button variant="outline" size="sm">View Calendar</Button>
+                                    <Link href="https://cal.com/byteedge/30min" target="_blank" className="text-blue-600 hover:underline">
+                                        Book a strategy call
                                     </Link>
                                 </div>
                             </div>

@@ -75,7 +75,7 @@ export default function AboutPage() {
                             }
                         ].map((founder) => (
                             <Card key={founder.name} className="text-center overflow-hidden group">
-                                <div className="bg-slate-100 dark:bg-slate-800 h-64 flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors overflow-hidden relative">
+                                <div className="bg-slate-100 dark:bg-slate-800 aspect-[3/4] flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors overflow-hidden relative">
                                     {founder.image ? (
                                         <img
                                             src={founder.image}

@@ -14,7 +14,7 @@ export function Logo({ className }: { className?: string }) {
                 priority
             /> */}
             <img
-                src="/byteedge-logo.png"
+                src="/byteedge-logo-light-mode.png"
                 alt="ByteEdge Consulting"
                 className="h-12 w-auto object-contain block dark:hidden"
             />

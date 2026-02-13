@@ -6,11 +6,13 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "@/app/components/Logo";
 import { Button } from "@/app/components/ui/Button";
 import { cn } from "@/app/lib/utils";
+import { ThemeToggle } from "@/app/components/ThemeToggle";
 
 const navLinks = [
-    { name: "Services", href: "/#services" },
+    { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "How We Work", href: "/#how-we-work" },
+    { name: "How We Work", href: "/how-we-work" },
+    { name: "Insights", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
 ];
@@ -54,10 +56,11 @@ export function Navbar() {
                     ))}
                 </div>
 
-                <div className="hidden md:block ml-4">
-                    <Link href="https://calendly.com/pandahubottawa/byteedge-strategy-call" target="_blank" rel="noopener noreferrer">
+                <div className="hidden md:flex items-center ml-4 gap-4">
+                    <Link href="https://cal.com/byteedge/30min" target="_blank" rel="noopener noreferrer">
                         <Button size="sm" className="rounded-full px-6">Book Call</Button>
                     </Link>
+                    <ThemeToggle />
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -83,7 +86,7 @@ export function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link href="https://calendly.com/pandahubottawa/byteedge-strategy-call" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="px-2 pb-2">
+                        <Link href="https://cal.com/byteedge/30min" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="px-2 pb-2">
                             <Button className="w-full rounded-xl">Book Strategy Call</Button>
                         </Link>
                     </div>

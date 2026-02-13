@@ -1,0 +1,35 @@
+[
+    {
+        "id": "roi-of-ai",
+        "slug": "roi-of-ai-why-most-projects-fail",
+        "title": "The ROI of AI: Why Most Projects Fail (And How Yours Can Succeed)",
+        "date": "2025-10-15",
+        "author": "Leano Sekonopo",
+        "category": "Strategy",
+        "excerpt": "70% of AI pilots never reach production. Learn the economic framework we use to ensure every line of code contributes to the bottom line.",
+        "content_html": "<p>Artificial Intelligence is no longer a novelty; it's a necessity. Yet, the landscape is littered with expensive prototypes that never delivered real value. Why?</p><h3>The PoC Trap</h3><p>Most companies start with 'What can we do with AI?' instead of 'What business problem needs solving?'. This leads to Proofs of Concept (PoCs) that are technically impressive but operationally irrelevant.</p><h3>The ByteEdge Framework</h3><p>We approach AI deployment backwards: from the P&L statement to the model architecture.</p><ul><li><strong>Define the Metric:</strong> Is it Cost of Goods Sold (COGS)? Customer Acquisition Cost (CAC)? Lifetime Value (LTV)?</li><li><strong>Establish the Baseline:</strong> What is the current manual process costing you?</li><li><strong>Model the Unit Economics:</strong> If the AI costs $0.05 per inference, does the math work at scale?</li></ul><p>By enforcing this discipline, we turn AI from a cost center into a profit engine.</p>",
+        "image": ""
+    },
+    {
+        "id": "modernizing-legacy",
+        "slug": "modernizing-legacy-systems-nextjs",
+        "title": "Strangling the Monolith: Modernizing Legacy Systems with Next.js",
+        "date": "2025-11-02",
+        "author": "Victoria Zikiye",
+        "category": "Engineering",
+        "excerpt": "You don't need a total rewrite. Discover the 'Strangler Fig' pattern for incrementally migrating rigorous enterprise systems to a modern stack.",
+        "content_html": "<p>The directive is clear: 'We need to modernize.' But your core business runs on a 15-year-old monolith that no one fully understands. A total rewrite is a recipe for disaster.</p><h3>Enter the Strangler Fig</h3><p>Named after the banyan trees that grow around a host tree, eventually replacing it, this pattern allows for incremental migration.</p><h3>Why Next.js?</h3><p>Next.js is uniquely successfully suited for this strategy because of its hybrid routing capabilities. You can:</p><ol><li>Deploy Next.js in front of your legacy content using <strong>Rewrites</strong>.</li><li>Carve out specific routes (e.g., <code>/dashboard</code>, <code>/checkout</code>) to be handled by the new app.</li><li>Proxy everything else back to the legacy system.</li></ol><p>This allows you to ship value in weeks, not years.</p>",
+        "image": ""
+    },
+    {
+        "id": "automating-boring-stuff",
+        "slug": "automating-the-boring-stuff-ceo-guide",
+        "title": "Automating the Boring Stuff: A Guide for CEOs",
+        "date": "2025-12-10",
+        "author": "Daniela Madubuike",
+        "category": "Automation",
+        "excerpt": "Your best talent is wasting 30% of their time on data entry. Here's how to reclaim that capacity without hiring more staff.",
+        "content_html": "<p>In every company, there exists a 'shadow workflow'. It's the copy-pasting between spreadsheets, the manual email tagging, the invoice data entry. It's invisible, unmeasured, and expensive.</p><h3>The Triple Threat of Manual Work</h3><ul><li><strong>Cost:</strong> Paying high salaries for low-value work.</li><li><strong>Error:</strong> Humans are bad at repetitive tasks. Error rates increase with volume.</li><li><strong>Morale:</strong> Nobody went to college to move data from CSV to PDF.</li></ul><h3>Where to Start?</h3><p>Look for high-volume, rules-based triggers. If X happens, then Y must happen. These are the prime candidates for autonomous agents.</p>",
+        "image": ""
+    }
+]

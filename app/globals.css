@@ -132,29 +132,30 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Premium Tech Dark Theme - Deep, starry, 'dev' feel */
-    --background: #030712;
-    /* Gray 950 - slightly cooler/deeper than slate */
-    --foreground: #f8fafc;
-    /* Slate 50 */
-    --primary: #3b82f6;
-    /* Blue 500 - Electric */
-    --primary-foreground: #ffffff;
-    --secondary: #1e293b;
-    /* Slate 800 */
-    --secondary-foreground: #f8fafc;
-    --accent: #1e293b;
-    --accent-foreground: #f8fafc;
-    --muted: #0f172a;
-    --muted-foreground: #94a3b8;
-    /* Slate 400 */
-    --card: #0b1120;
-    /* Slightly lighter than bg */
-    --card-foreground: #f8fafc;
-    --border: #1e293b;
-  }
+/* Class-based Dark Mode */
+/* Class-based Dark Mode */
+:root.dark {
+  color-scheme: dark;
+  /* Premium Tech Dark Theme - Deep, starry, 'dev' feel */
+  --background: #030712;
+  /* Gray 950 - slightly cooler/deeper than slate */
+  --foreground: #f8fafc;
+  /* Slate 50 */
+  --primary: #3b82f6;
+  /* Blue 500 - Electric */
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  /* Slate 800 */
+  --secondary-foreground: #f8fafc;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --muted: #0f172a;
+  --muted-foreground: #94a3b8;
+  /* Slate 400 */
+  --card: #0b1120;
+  /* Slightly lighter than bg */
+  --card-foreground: #f8fafc;
+  --border: #1e293b;
 }
 
 body {
